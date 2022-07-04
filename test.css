@@ -1,0 +1,103 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Titillium Web', sans-serif;
+
+}
+html
+{
+    height: 100%;
+}
+header
+{
+    text-align: center;
+    background-color:rgb(105, 220, 84);
+}
+.header
+{
+    height: 3.5rem;
+}
+article
+{
+    background-color: rgb(187, 187, 10);
+    padding-left: 2rem;
+}
+.inline-block
+{
+    display: inline-block;
+}
+.inline
+{
+    display: inline;
+}
+.block
+{
+    display: block;
+}
+h2{
+    display: inline;
+    padding: 1rem;
+}
+.project-heading
+{
+    background-color: crimson;
+    width: 98%;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+#input
+{
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+#ul
+{
+    list-style: none;
+}
+.box
+{
+    width: 30%;
+    text-align: center;
+    display: inline-table;
+    padding: 1rem;
+    height: 550px;
+    background-color: bisque;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+button
+{
+    margin-left: 0.6rem;
+    width: 3rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+button:hover
+{
+    background-color:lightseagreen;
+}
+li
+{
+    list-style: none;
+}
+ul button{
+ border: none;
+ display: inline-block;
+}
