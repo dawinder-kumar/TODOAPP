@@ -1,46 +1,54 @@
 let input = document.getElementById("input");
 let button = document.getElementById("add-btn");
-let box1Ul = document.getElementById('ul');
-let box2Ul = document.querySelector("#box2-ul");
-button.addEventListener('click', function () {
-    if (input.value == "") {
-        alert("Please enter some text")
-    } else {
-        alert("are u really Want for add task");
-        let box1Li = document.createElement("li");
-        content = document.createTextNode(input.value);
-        box1Li.append(content);
-        box1Ul.append(box1Li);
+let todoUl = document.getElementById('ul');
+let inprogressUl = document.querySelector("#box2-ul");
 
-        const clear = document.createElement('button');
-        clear.append(document.createTextNode("Clear"));
-        box1Li.append(clear);
-        clear.addEventListener('click', function () {
-            box1Ul.remove();
-            box2Ul.remove();
-            box3Ul.remove();
-        });
+button.addEventListener('click', function () {
+
+
+    if (input.value == "") {
+        alert("Please enter some text");
+    } else {
+
+        let todoList = document.createElement("li");
+        content = document.createTextNode(input.value);
+        todoList.append(content);
+        todoUl.append(todoList);
+
 
         let taskAdd = document.createElement("button");
         taskAdd.append(document.createTextNode("addTask"));
-        box1Li.append(taskAdd);
+        todoList.append(taskAdd);
         taskAdd.addEventListener('click', function () {
-
-            box2Ul.append(box1Li);
+            let inprogressList = document.createElement("li");
+            let taskDone = document.createElement("button");
+            taskDone.append(document.createTextNode("taskDone"));
+            inprogressList.append(todoList);
+            inprogressUl.append(inprogressList);
+            todoList.append(taskDone);
             taskAdd.style.display = 'none';
+
+            taskDone.addEventListener('click', function () {
+                completedUl.append(inprogressList);
+
+                taskDone.style.display = 'none';
+
+            });
         });
-        
-        
         input.value = "";
         let doneButton = document.getElementById("done-button");
-        let box3Ul = document.getElementById('box3-ul')
+        let completedUl = document.getElementById('box3-ul')
         doneButton.addEventListener('click', function () {
-
-            let list3 = document.createElement("li");
-            list3.append(box1Li);
-            box3Ul.append(list3);
-
+            let completedList = document.createElement("li");
+            completedList.append(inprogressUl);
+            completedUl.append(completedList);
         });
+        let clear1 = document.createElement("button");
+        clear1.append(document.createTextNode("clear"));
+        todoList.append(clear1);
+        clear1.addEventListener('click', function () {
+            alert("Are you really Want to Delete Task");
+            todoList.remove();
+        })
     }
-
 });
