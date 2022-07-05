@@ -7,11 +7,12 @@ let i = 0;
 
 
 button.addEventListener('click', function () {
-    i+=1;
-    count.innerHTML=i;
+
     if (input.value == "") {
         alert("Please enter some text");
     } else {
+        i += 1;
+        count.innerHTML = i;
 
         let todoList = document.createElement("li");
         content = document.createTextNode(input.value);
@@ -19,7 +20,7 @@ button.addEventListener('click', function () {
         todoUl.append(todoList);
         todoList.style.background = 'white';
         todoList.style.borderRadius = '1rem';
-    
+
 
         let taskAdd = document.createElement("button");
         taskAdd.append(document.createTextNode("addTask"));
@@ -32,6 +33,10 @@ button.addEventListener('click', function () {
             inprogressList.append(todoList);
             inprogressUl.append(inprogressList);
             todoList.append(taskDone);
+            if (i > 0) {
+                i--;
+                count.innerHTML = i;
+            }
             taskAdd.style.display = 'none';
 
 
@@ -39,9 +44,7 @@ button.addEventListener('click', function () {
                 completedUl.append(inprogressList);
                 taskDone.style.display = 'none';
             });
-
-             let doneButton = document.getElementById("done-button");
-             let completedUl = document.getElementById('box3-ul');
+            let completedUl = document.getElementById('box3-ul');
             doneButton.addEventListener('click', function () {
                 let completedList = document.createElement("li");
                 completedList.append(inprogressUl);
@@ -55,7 +58,9 @@ button.addEventListener('click', function () {
         clear.addEventListener('click', function () {
             alert("Are you really Want to Delete Task");
             todoList.remove();
-
-        })
+            if (i > 0)
+                i--;
+            count.innerHTML = i;
+        });
     }
 });
