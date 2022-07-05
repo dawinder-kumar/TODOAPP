@@ -21,10 +21,12 @@ header
 .header
 {
     height: 3.5rem;
+    background-color: black;
+    color: #fafafa;
 }
 article
 {
-    background-color: rgb(211, 226, 231);
+    background-color: white;
     padding-left: 2rem;
 }
 .inline-block
@@ -39,20 +41,23 @@ article
 {
     display: block;
 }
+
+
 h2{
     display: inline;
     padding: 1rem;
 }
 .project-heading
 {
-    background-color:lightsteelblue;
-    width: 98%;
+    background-color:whitesmoke;
+    width: 99%;
+    
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-    border:ridge
+
 }
 #input
 {
@@ -73,16 +78,20 @@ h2{
     display: inline-table;
     padding: 1rem;
     height: 542px;
-    background-color: bisque;
+    background-color:#fafafa;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-    border:ridge;
+    margin:0.3rem;
+}
+ .box li{
+    margin: 1rem;
 }
 button
 {
+    
     margin-left: 0.6rem;
     width: 3rem;
     border-radius: 0.5rem;
@@ -105,19 +114,18 @@ ul button{
  width: 4rem;
  height: 1rem;
 }
+.box button{
+    color: green;
+    height: 1.5rem;
+}
 #box1
 {
     max-width:95% ;
 }
 #count
 {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    color: red;
+    font-weight: 900;
 }
 #box3 li
 {
@@ -127,3 +135,13 @@ ul button{
 {
     display: inline-block;
 }
+#done-button
+{
+    width: 4rem;
+
+}
+li button{
+    float: right;
+    clear: left;
+}
+
